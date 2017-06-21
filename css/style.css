@@ -303,6 +303,37 @@
 }
 
 
+@media (min-width: 992px) {
+
+    /* Красная линия */
+    .menu-001::after {
+        width: 942px;
+    }
+
+    .gallery-001 .header {
+        margin-left: -3px;
+        margin-bottom: 43px;
+    }
+
+    .gallery-001 .thumbnail {
+        width: 308px;
+    }
+
+    .gallery-001 .row > div:nth-child(2) .thumbnail {
+        width: 301px;
+    }
+
+    .gallery-001 .carousel {
+        width: 301px;
+    }
+
+    .gallery-001 .button-block {
+        margin-left: 29px;
+    }
+
+}
+
+
 
 /*@media (min-width: 1200px) {*/
 
