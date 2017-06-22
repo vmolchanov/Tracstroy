@@ -129,6 +129,8 @@
 }
 
 .gallery-001 .thumbnail {
+    position: relative;
+
     width: 328px;
     margin-left: auto;
     margin-right: auto;
@@ -166,6 +168,29 @@
 }
 
 /* TODO реализовать hover для xs viewport */
+.gallery-001 .thumbnail:hover span.hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: #113873;
+    opacity: 0.75;
+}
+
+.gallery-001 .thumbnail:hover span.hover::before {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    content: url("../img/magnifier.svg");
+}
 
 
 @media (min-width: 768px) {
@@ -181,6 +206,7 @@
         font-weight: 300;
     }
 
+    /* Иконка карты */
     .header-001 .address::before {
         position: absolute;
         left: -16px;
@@ -331,6 +357,69 @@
         margin-left: 29px;
     }
 
+}
+
+
+@media (min-width: 1200px) {
+
+    /* Иконка карты */
+    .header-001 .address::before {
+        left: -13px;
+    }
+
+    /* Красная линия */
+    .menu-001::after {
+        width: 1140px;
+    }
+
+    .gallery-001 .thumbnail {
+        width: 374px;
+    }
+
+    .gallery-001 .row > div:nth-child(2) .thumbnail {
+        width: 368px;
+    }
+
+    .gallery-001 .carousel {
+        width: 368px;
+    }
+
+    .gallery-001 .button-block {
+        margin-left: 79px;
+        margin-top: 11px;
+    }
+
+    /* О компании */
+    .menu-001 .navbar-nav > li:first-child > a {
+        padding-left: 5px;
+        padding-right: 15px;
+    }
+
+    /* Прайс */
+    .menu-001 .navbar-nav > li:nth-child(2) > a {
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+
+    /* Услуги */
+    .menu-001 .navbar-nav > li:nth-child(3) > a {
+        padding-right: 4px;
+        padding-left: 26px;
+    }
+
+    /* Документы */
+    .menu-001 .navbar-nav > li:nth-child(4) > a {
+        padding-right: 3px;
+        padding-left: 27px;
+    }
+
+    .menu-001 .dropdown-menu {
+        right: -71px;
+    }
+
+    .menu-001 .dropdown-menu::before {
+        left: calc(50% - 6px);
+    }
 }
 
 
